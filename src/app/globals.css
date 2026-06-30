@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0a0e12;
+  --panel: #11161c;
+  --panel-2: #161c24;
+  --hairline: #232b34;
+  --gold: #e8a33d;
+  --gold-dim: #8a6526;
+  --bullish: #3fb68b;
+  --bearish: #e85c4a;
+  --text-hi: #f2efe8;
+  --text-mid: #a7b0ba;
+  --text-low: #5e6a76;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-hairline: var(--hairline);
+  --color-gold: var(--gold);
+  --color-bullish: var(--bullish);
+  --color-bearish: var(--bearish);
+  --color-text-hi: var(--text-hi);
+  --color-text-mid: var(--text-mid);
+  --color-text-low: var(--text-low);
+  --font-display: var(--font-space-grotesk);
+  --font-fa: var(--font-vazirmatn);
+  --font-mono: var(--font-jetbrains);
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-vazirmatn), var(--font-space-grotesk), sans-serif;
+}
+html[dir="ltr"] body {
+  font-family: var(--font-space-grotesk), var(--font-vazirmatn), sans-serif;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text-hi);
+}
+
+.font-tabular {
+  font-family: var(--font-jetbrains), monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+html[dir="rtl"] .ticker-track {
+  animation-direction: reverse;
+}
+.ticker-track {
+  animation: ticker-scroll 38s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+

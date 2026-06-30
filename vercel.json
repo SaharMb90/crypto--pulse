@@ -1,0 +1,8 @@
+{
+  "crons": [
+    { "path": "/api/signals/log", "schedule": "0 21 * * *" },
+    { "path": "/api/signals/evaluate", "schedule": "10 21 * * *" },
+    { "path": "/api/predictions/log", "schedule": "5 21 * * *" },
+    { "path": "/api/predictions/evaluate", "schedule": "15 21 * * *" }
+  ]
+}
